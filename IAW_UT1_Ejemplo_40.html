@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+	<meta charset="UTF-8"/>
+	<title>UT1 - JavaScript - Ejemplo 40 </title>
+	<style>
+		#capa0 {
+			position:absolute; 
+			top:250px; 
+			left:550px; 
+			height:200px;
+			width:200px; 
+			color:blue; 
+			background-color:orange;			
+		}
+		#capa1 {
+			position:absolute; 
+			top:50px; 
+			left:950px; 
+			height:200px;
+			width:200px; 
+			color:blue; 
+			background-color:orange;
+			overflow: auto;
+		}
+	</style>
+	<script>
+		var posleft0 = 550; // posicion left de la capa0
+		var postop0 = 250; // posicion top de la capa0
+		var posleft1 = 950; // posicion left de la capa1
+		var postop1 = 50; // posicion top de la capa1
+		var bkcolor1 = "orange"; // color de fondo de capa1
+		var ancho0 = 200; // ancho de la capa0
+		var ancho1 = 200; // ancho de la capa1				
+		var margen = 50;// Tomamos un margen de 50px para no salirnos de la pantalla
+		var inicio = 10;// Posición de "reinicio" de la capa
+		var desplazamiento = 20; // número de píxeles que movemos las capas cada vez
+				
+		window.onload = function() {		
+			document.getElementById("capa0").onmouseover=mueveCapa0;
+			document.getElementById("capa1").onmouseover=cambiaFondo1;
+			document.getElementById("capa1").onmouseout=cambiaFondo1;
+			document.getElementById("btn0").onclick=mueveCapa1;
+			document.getElementById("btn1").onclick=cambiaCapa;
+		}
+		function cambiaCapa(){
+			var texto = "<i>...Es dinámico... </i>";
+			document.getElementById("capa1").innerHTML=document.getElementById("capa1").innerHTML + texto;
+		}
+	
+		function mueveCapa0(){ 		
+			var anchoVentana = window.innerWidth; // ancho de la ventana
+			if ((posleft0+margen+ancho0) < anchoVentana)
+			{
+				posleft0 = posleft0+desplazamiento;				
+			}
+			else // Si sobrepasamos el borde de la ventana, posicionamos la capa al principio
+			{
+				posleft0 = inicio;
+			}
+			this.style.left=posleft0+"px";
+		}
+		function mueveCapa1(){ 		
+			var anchoVentana = window.innerWidth; // ancho de la ventana
+			if ((posleft1+margen+ancho1) < anchoVentana)
+			{
+				posleft1 = posleft1+desplazamiento;				
+			}
+			else // Si sobrepasamos el borde de la ventana, posicionamos la capa al principio
+			{
+				posleft1= inicio;		
+			}
+			document.getElementById("capa1").style.left=posleft1+"px";
+		}
+		function cambiaFondo1(){ 
+			if ("red"==bkcolor1)
+			{
+				bkcolor1 = "orange";				
+			}			
+			else
+			{
+				bkcolor1 = "red";
+			}
+			this.style.backgroundColor=bkcolor1;
+	}
+	</script>
+</head>
+<body>
+	<div id="capa0">CAPA 0<h1>Esta es la capa 0</h1>Pasa el ratón y se mueve</div>		
+	<div id="capa1">CAPA 1<h1> Esta es la capa 1</h1>Pasa el ratón y cambia el fondo</div>
+	<input id="btn0" type="button" value="Mover capa 1"/> 	
+	<input id="btn1" type="button" value="Añadir texto capa 1"/> 
+</body>
+</html>

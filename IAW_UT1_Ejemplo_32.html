@@ -1,0 +1,20 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title> UT1 - JavaScript - Ejemplo 32 </title>
+</head>
+<body>
+<script>
+	var otra=111;
+	function cuadrado(x){
+		var cuad=x*x;
+		document.write("La variable 'otra', que es global, desde dentro de la función vale: " + otra + "<br>");
+		return cuad;
+		alert("Aquí no llega");
+	}
+	document.write("5 al cuadrado es: " + cuadrado(5) + "<br>");
+	document.write("La variable 'otra', que es global, vale: " + otra + "<br>");
+	document.write("La variable 'cuad', local a la función, es: " + cuadrado.cuad + "<br>");
+</script>
+</body>
+</html>

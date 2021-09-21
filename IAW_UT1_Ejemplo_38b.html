@@ -1,0 +1,34 @@
+<!DOCUMENT html>
+<html>
+<head>	
+	<title> UT1 - JavaScript - Ejemplo 38b </title>
+	<meta charset="UTF-8"/>
+	<style>
+		#capa01
+		{
+			position:absolute;
+			top:200px;
+			height:400px;
+			font-size:2em;
+		}
+	</style>
+</head>
+<body>	
+	<div id="capa01" style="background-color:pink;width:300px;left:250px;">Elemento DIV</div>
+	<script>
+		var lacapa = document.getElementById("capa01");
+		var salida = "";
+		salida = salida + "top=" + lacapa.style.top + "<br/>";
+		salida = salida + "height=" + lacapa.style.height + "<br/>";
+		salida = salida + "color=" + lacapa.style.backgroundColor + "<br/>";
+		salida = salida + "width=" + lacapa.style.width + "<br/>";
+		salida = salida + "left=" + lacapa.style.left + "<br/>";
+		lacapa.innerHTML = lacapa.innerHTML + "<br/>" + salida;
+		// Podemos acceder al elemento style a través de la jerarquía DOM
+		var estilo = document.getElementsByTagName("style")[0]; 
+		console.log(estilo.innerHTML);
+		/* Para acceder a los valores de las propiedades CSS que muestra el navegador
+		podemos utilizar el método getComputedStyle() */
+	</script>
+</body>
+</html>

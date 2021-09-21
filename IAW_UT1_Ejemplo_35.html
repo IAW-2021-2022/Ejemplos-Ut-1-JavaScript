@@ -1,0 +1,17 @@
+<html>
+<head>	
+	<title> UT1 - JavaScript - Ejemplo 35 </title>
+</head>
+<body>
+	<select id="mi_select">
+		<option>1</option>
+		<option>2</option>
+		<option>3</option>
+	</select>
+	<script language="JavaScript"> 
+		var oSelect = document.getElementById("mi_select");
+		var oItems = oSelect.getElementsByTagName("option"); 
+		alert('Opciones:' + oItems.length);
+	</script> 
+</body>
+</html>

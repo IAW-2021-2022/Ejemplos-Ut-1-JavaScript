@@ -1,0 +1,17 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title> UT1 - JavaScript - Ejemplo 39 </title>
+</head>
+<body>
+<script>
+function Desaparece(){
+	document.getElementById("text1").style.visibility='hidden';
+}
+function Aparece(){
+	document.getElementById("text1").style.visibility='visible';
+}
+</script>
+<h1 id="text1" onMouseOver="Desaparece()" onMouseOut="Aparece()">Texto que desaparece al pasar por encima el puntero del ratón</h1>
+</body>
+</html>

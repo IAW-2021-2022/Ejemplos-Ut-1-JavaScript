@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<title> UT1 - JavaScript - Actividad Resuelta 32b </title>
+</head>
+<body>
+<script>
+function giraCadena(cad) 
+{
+    // Paso 1. Con split, convertimos la cadena en un array
+    var arrayCadena = cad.split(""); 
+     
+    // Paso 2. Con reverse invertimos el array
+    var arrayInvertido = arrayCadena.reverse();   
+ 
+    // Paso 3. Con join convertimos el array en una cadena de caracteres
+    var cadenaInvertida = arrayInvertido.join("");
+        
+    // Paso 4. Devolvemos la cadenainvertida
+    return cadenaInvertida; 
+}
+ 
+var cadena = "Haga el favor de cerrar la puerta"
+document.write(cadena);
+document.write("<br/>");
+document.write(giraCadena(cadena));
+</script>
+</body>
+</html>

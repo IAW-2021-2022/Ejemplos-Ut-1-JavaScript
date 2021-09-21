@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8"/>
+	<title> UT1 - JavaScript - Ejemplo 45 </title>
+	<script>
+		window.onload = function () {
+			document.onclick = muestraInformacion;
+		}
+		function muestraInformacion(evento) 
+		{			
+			var pantallaX = evento.screenX;
+			var pantallaY = evento.screenY;
+			var ventanaX = evento.clientX;
+			var ventanaY = evento.clientY;							
+			var paginaX = evento.pageX;
+			var paginaY = evento.pageY;
+			var salida = "Posición: " + pantallaX + ", " + pantallaY + " respecto de la pantalla\n";
+			salida += "Posición: " + ventanaX + ", " + ventanaY + " respecto de la ventana del navegador\n";
+			salida += "Posición: " + paginaX + ", " + paginaY + " respecto de la página";
+			alert(salida);
+		}		
+	</script>
+</head>
+<body>
+</body>
+</html>

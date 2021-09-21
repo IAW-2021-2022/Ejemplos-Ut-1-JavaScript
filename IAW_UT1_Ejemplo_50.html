@@ -1,0 +1,35 @@
+<html>
+<head>	
+	<title> UT1 - JavaScript - Ejemplo 50 </title>
+	<script>	
+	window.onload = function(){
+		document.getElementById("caja1").onblur = valor;
+		document.getElementById("boton1").onclick = efecto;
+	}	
+	function valor (){
+		alert(this.value);
+	}	
+	function efecto()
+	{
+		document.getElementById("caja1").rows=document.getElementById("caja1").rows+1;
+		document.getElementById("caja1").cols=document.getElementById("caja1").cols+1;		
+	
+		if (document.getElementById("caja1").getAttribute("Mayus")== "1") 
+		{
+			document.getElementById("caja1").value=document.getElementById("caja1").value.toUpperCase();
+			document.getElementById("caja1").setAttribute("Mayus","0");
+		}
+		else
+		{
+			document.getElementById("caja1").value=document.getElementById("caja1").value.toLowerCase();
+			document.getElementById("caja1").setAttribute("Mayus","1");
+		}	
+	}	
+	</script>
+</head>
+<body>
+	<textarea id="caja1" rows="3" cols="15" Mayus="1"/>Este es el texto que contiene el textarea</textarea>
+	
+	<input type="button" id="boton1" value="OK"/">
+</body>
+</html>

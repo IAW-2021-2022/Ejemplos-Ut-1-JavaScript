@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8"/>
+	<title>Ejemplo eventos de teclado</title>
+	<script>
+		var eventoControlado = false;
+		window.onload = function () {
+			document.onkeypress = mostrarInformacionCaracter; // Teclas imprimibles
+			document.onkeyup = mostrarInformacionTecla; 	  // Teclas no imprimibles
+		}
+		function mostrarInformacionCaracter(evento) 
+		{
+			var msg = ""; 
+			
+			var elCaracter = String.fromCharCode(evento.which);
+			
+			// 0 es ESC y 13 es INTRO. Generan evento keypress
+            if (evento.which!=0 && evento.which!=13) 
+			{
+                msg = 'Tecla pulsada: ' + elCaracter;
+                document.getElementById("control").innerHTML += msg + '-----------------------------<br/>'; 
+			}
+            else 
+			{ 
+				msg = 'Pulsada tecla especial';
+                document.getElementById("control").innerHTML += msg + '-----------------------------<br/>';
+			}
+            eventoControlado=true;
+		}
+		function mostrarInformacionTecla(evento) 
+		{
+			var msg = ''; 
+			
+			var teclaPulsada = evento.keyCode;
+            if (teclaPulsada == 20) // Bloq. Mayúsculas
+			{ 
+				msg = 'Pulsado caps lock (act/des mayúsculas)';
+			}
+            else if (teclaPulsada == 16) // Tecla SHIFT
+			{ 
+				msg = 'Pulsado shift';
+			}
+            else if (eventoControlado == false) // NO era una tecla imprimible
+			{ 
+				msg = 'Pulsada tecla especial';
+			}
+            
+			if (msg) 
+			{
+				control.innerHTML += msg + '-----------------------------<br/>';
+			}
+            eventoControlado = false;
+		}
+	</script>
+</head>
+<body>
+	<div id="cabecera">
+		<h2>Eventos de Teclado</h2>
+		<h3>Ejemplo JavaScript: pulse una tecla</h3>
+	</div>
+	<div id="control"></div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+<head>	
+	<title> UT1 - JavaScript - Ejemplo 59 </title>
+</head>
+<body>
+<script>
+	
+	var dias=new Array("Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado");
+	var fecha=new Date();
+	fecha.setDate(17);
+	fecha.setMonth(9);
+	fecha.setYear(2020);
+	// No hace falta poner la hora, pero es para que se vea cómo se hace
+	fecha.setHours(17);
+	fecha.setMinutes(36);
+	fecha.setSeconds(36);
+	document.write("El día " + fecha +" será " + dias[fecha.getDay()]);
+
+	var fecha2=new Date(2111,10,11);
+	document.write("<br>El día " + fecha2 + " será "  + dias[fecha2.getDay()]);
+
+</script>
+</body>
+</html>

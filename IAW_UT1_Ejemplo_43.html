@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8"/>
+	<title> UT1 - JavaScript - Ejemplo 43 </title>
+	<script>
+		window.onload = function (){
+			document.onkeypress = manejador;
+		}
+		function manejador(evento)  // evento es un 'parámetro mágico' que proporciona el navegador para los
+									// eventos de teclado y de ratón
+		{			
+			var caracter = evento.which;
+			alert("El carácter pulsado es: " + String.fromCharCode(caracter));
+		}		
+	</script>
+</head>
+<body>
+</body>
+</html>

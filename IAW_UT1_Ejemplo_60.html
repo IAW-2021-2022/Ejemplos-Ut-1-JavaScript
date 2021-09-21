@@ -1,0 +1,27 @@
+<html>
+<head>	
+	<title> UT1 - JavaScript - Ejemplo 60 </title>
+</head>
+<body>
+<script>
+	mesArray=new Array("Enero","Febrero","Marzo","Abril","Mayo","Junio", "Julio", 
+		"Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre");
+	diaArray=new Array("Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado");	
+
+	function queDia(dia, mes, anyo){
+		var fecha=new Date(anyo, mes-1, dia);
+		return diaArray[fecha.getDay()];
+	}
+
+	function textoFecha (dia, mes, anyo){
+		var fecha=new Date(anyo, mes-1, dia);
+		var s="";
+		s=dia + " de " + mesArray[mes-1] + " de " + anyo;
+		return s;
+	}
+
+	document.write("QueDia(17,10,2020)=" + queDia(17,10,2020) + "<br>");
+	document.write("<br>textoFecha(11,11,2111)="+ textoFecha(11,11,2111) + "<br>");
+</script>
+</body>
+</html>

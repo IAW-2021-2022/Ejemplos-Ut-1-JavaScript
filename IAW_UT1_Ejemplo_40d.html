@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8"/>
+	<title> UT1 - JavaScript - Ejemplo 40d </title>
+</head>
+<body>
+	<h3>Los 5 lenguajes de programación más demandados por las empresas</h3>
+	<ol id="milista">
+		<li>Java</li>
+		<li>Python</li>
+		<li>JavaScript</li>
+		<li>C#</li>
+		<li>PHP</li>
+	</ol>
+	<script>
+		var texto = document.getElementById("milista").innerText;
+		console.log("El contenido textual es: " + texto);
+		var contenido = document.getElementById("milista").innerHTML;
+		console.log("El contenido HTML es: " + contenido);	
+	</script>
+</body>
+</html>

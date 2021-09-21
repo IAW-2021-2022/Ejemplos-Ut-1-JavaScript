@@ -1,0 +1,31 @@
+<html>
+<head>	
+	<title> UT1 - JavaScript - Ejemplo 46 </title>
+</head>
+<body>
+<script>
+	/**************************/
+	function texto1_onChange()
+	{
+		texto1 = document.getElementById("texto1");
+		alert("Has cambiado el valor por defecto:"  +  texto1.defaultValue +  
+			"\nPor el valor:" + texto1.value + 
+			"\nPropiedad1:" + texto1.getAttribute("otra1") + 
+			"\nPropiedad2:" + texto1.getAttribute("otra2"));
+	}
+	/*************************/
+	function texto1_onBlur(){
+		alert("Has salido de la caja de texto");
+	}
+	/*************************/
+</script>
+
+Nombre1: <input type="text" id="texto1" 
+				   value="valor defecto" 
+				   otra1="Esta es la propiedad 1"
+				   otra2="Esta es la propiedad 2"
+				   onChange="texto1_onChange()"
+				   onBlur="texto1_onBlur()"/>
+
+</body>
+</html>

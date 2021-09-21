@@ -1,0 +1,25 @@
+<html>
+<head>	
+	<title> UT1 - JavaScript - Ejemplo 51 </title>
+	<script>
+	window.onload = function(){
+		document.getElementById("chk1").onclick = muestra;
+		document.getElementById("chk2").onclick = muestra;
+		document.getElementById("chk3").onclick = muestra;		
+	}	
+	function muestra()
+	{		
+		var elemento1 = document.getElementById('chk1');
+		var elemento2 = document.getElementById('chk2');
+		var elemento3 = document.getElementById('chk3');
+			
+		alert(elemento1.value + "=" + elemento1.checked + "\n" + elemento2.value + "=" + elemento2.checked + "\n" + elemento3.value + "=" + elemento3.checked);
+	}			
+</script>
+</head>
+<body>
+	<input type="checkbox" id="chk1" value="Inglés"/> Inglés <br>
+	<input type="checkbox" id="chk2" value="Francés"/> Francés <br>
+	<input type="checkbox" id="chk3" value="Alemán"/> Alemán <br>
+</body>
+</html>

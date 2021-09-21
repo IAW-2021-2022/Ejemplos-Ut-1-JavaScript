@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>	
+	<title> UT1 - JavaScript - Ejemplo 57b </title>
+	<meta charset="UTF-8"/>
+	<script>
+	window.onload = function(){
+		document.getElementById("datosCliente").onsubmit = comprobarDatos;		
+	}	
+	function comprobarDatos()
+	{
+		var nom = document.getElementById("nombre").value;
+		var ape = document.getElementById("apellidos").value;
+		var resultado = compruebaMay(nom) && compruebaMay(ape);
+		if (resultado == false)
+		{
+			alert("Revise el formulario");
+			// Ahora podemos poner el foco en aquellos elementos que son incorrectos
+			if (compruebaMay(nom) == false)
+			{
+				document.getElementById("nombre").focus();
+			}
+			else if (compruebaMay(ape) == false)
+			{
+				document.getElementById("apellidos").focus();
+			}
+		}
+		return (resultado);
+	}
+	function compruebaMay(texto)
+	{
+		var salida = false;
+		var nuevoTexto = texto.toUpperCase();
+		
+		if (texto == nuevoTexto)
+		{	
+			salida = true;
+		}
+		return (salida);
+	}
+
+</script>
+</head>
+<body>	
+	<form id="datosCliente" action="procesar.html" method="POST">
+		<label for="nombre">Nombre:</label>
+		<input type="text" id="nombre" size="40" placeholder="Introduzca su nombre en mayúsculas"/><br/><br/>
+		<label for="apellidos">Apellidos:</label>
+		<input type="text" id="apellidos" size="50" placeholder="Introduzca sus apellidos en mayúsculas"/><br/><br/>
+		<input type="submit" value="Enviar"/>
+		<input type="reset" value="Borrar"/>
+	</form>	
+</body>
+</html>

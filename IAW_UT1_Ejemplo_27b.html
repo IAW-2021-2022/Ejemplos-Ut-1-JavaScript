@@ -1,0 +1,20 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title> UT1 - JavaScript - Ejemplo 27b </title>
+</head>
+<body>
+<script>
+	var a=10;
+	var b=20;
+	var c=30;
+	var expresion = "(a + b)==c";
+	document.write("<br/>El resultado de evaluar "+ expresion + " es: "+ eval(expresion));	
+	expresion = "(a*b)+c";
+	document.write("<br/>El resultado de evaluar  "+ expresion + " es: "+ eval(expresion));	
+	expresion = "if (a == b) {c = 100;} else c = -100; ";	
+	eval(expresion);
+	document.write("<br/>Después de evaluar  "+ expresion + " el valor de c es: "+ c);	
+</script>
+</body>
+</html>

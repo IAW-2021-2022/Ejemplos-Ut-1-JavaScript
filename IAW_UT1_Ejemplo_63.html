@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>	
+	<meta charset="UTF-8"/>
+	<title> UT1 - JavaScript - Ejemplo 63 </title>
+<script>
+	function muestraOrigen(){
+		alert("El href=" + window.opener.location.href);
+	}
+	function cambiaImagen(){
+		window.opener.document.getElementById('im').src="imagenes/verona.jpg";		
+	}
+</script>
+</head>	
+<body>
+	<a href="javascript:muestraOrigen()">Muestra  la página origen</a><br>
+	<a href="javascript:cambiaImagen()">Cambiar imagen en la página origen</a>
+</body>
+<html>

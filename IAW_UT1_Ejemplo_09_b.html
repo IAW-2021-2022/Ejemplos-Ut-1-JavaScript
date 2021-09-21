@@ -1,0 +1,26 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>Destruir el contenido</title>
+	<script>
+		window.onload = function() 
+		{
+			document.getElementById("btn1").onclick = miFuncion;
+			//document.getElementById("btn1").addEventListener("click", miFuncion);
+		}
+	
+		function miFuncion()
+		{
+			document.write("¡Vaya! ¡El documento ha desaparecido!");
+		}
+	</script>
+</head>
+<body>
+
+<h1>Mi primera página Web</h1>
+
+<p>Mi primer párrafo.</p>
+
+<button id="btn1">Pulsa</button>
+</body>
+</html>

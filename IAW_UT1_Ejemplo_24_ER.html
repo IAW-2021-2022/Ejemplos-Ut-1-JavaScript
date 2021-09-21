@@ -1,0 +1,23 @@
+<html>
+<head>
+	<title> UT1 - JavaScript - Ejemplo 24 - Expresiones regulares </title>
+</head>
+<body>
+<script>
+	//var expr_regular = /(([a-z|A-Z])*([0-9|A-Z])+){4,20}/;
+	//var expr_regular = /((\w*)[a-z]+(\w*)[0-9|A-Z]+(\w*)){4,20}/;
+	//var expr_regular2 = /\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)/;
+	
+	/*
+	if( !(/\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)/.test(valor)) ) {
+		return false;
+		}
+  */
+
+	var expr_regular = /([a-z]*[a-z]+[0-9|A-Z]+[a-z]*){4,20}/;
+	var salida = expr_regular.test("aAcb0daAaA");
+	document.write(salida);	 
+	
+</script>
+</body>
+</html>

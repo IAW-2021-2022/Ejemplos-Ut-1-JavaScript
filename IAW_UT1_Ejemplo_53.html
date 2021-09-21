@@ -1,0 +1,31 @@
+<html>
+<head>	
+	<title> UT1 - JavaScript - Ejemplo 53 </title>
+	<script>		
+		function muestra(obj){
+			var texto="";
+			var fin = 0;			
+			var rB = document.getElementsByName(obj);
+			for (var i=0; (i<rB.length) && (fin == 0); i++){
+				if (rB[i].checked) {
+					texto=rB[i].value;
+					fin = 1;					
+				}
+			}
+			alert("Está marcado:" + texto);
+		}
+	</script>
+</head>
+<body>
+	<br><br>
+	<u>Estado Civil</u><br>
+	<input type="radio" name="estCivil" value="soltero" checked onClick="muestra('estCivil')"> soltero <br>
+	<input type="radio" name="estCivil" value="casado" onClick="muestra('estCivil')"> casado <br>
+	<input type="radio" name="estCivil" value="separado" onClick="muestra('estCivil')"> separado <br>
+	<input type="radio" name="estCivil" value="viudo" onClick="muestra('estCivil')"> viudo <br>
+	
+	<u>Sexo</u><br>
+	<input type="radio" name="sexo" value="hombre" onClick="muestra('sexo')"> hombre <br>
+	<input type="radio" name="sexo" value="mujer" checked onClick="muestra('sexo')"> mujer <br>	
+</body>
+</html>

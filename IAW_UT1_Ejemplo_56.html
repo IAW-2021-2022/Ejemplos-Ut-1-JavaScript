@@ -1,0 +1,38 @@
+<html>
+<head>	
+	<title> UT1 - JavaScript - Ejemplo 56 </title>
+	<script>
+	window.onload = function(){
+		document.getElementById("boton1").onclick = mostrar;		
+	}	
+	function mostrar(){
+		var s;
+		var f1,f2;
+		f1 = document.getElementById('form1').getElementsByTagName('input');
+		f2 = document.getElementById('form2').getElementsByTagName('input')
+		s=   document.getElementById('texto0').value +"\n" +  f1[0].value + "\n" +  
+			 f1[1].value + "\n" + f2[0].value + "\n" + f2[1].value + "\n" +
+			 document.getElementById('texto5').value  +"\n" ;
+		alert(s);
+		alert(document.getElementById("texto1").value);
+		alert(document.getElementById("texto3").value);
+		alert(document.getElementById("texto5").getAttribute('valor5'));
+	}
+</script>
+</head>
+<body>
+	Texto0: <input type="text" id="texto0" value="Texto0"/><br>
+	<form id="form1">
+		Texto1:<input type="text" id="texto1" value="Texto1"/><br>
+		Texto2:<input type="text" id="texto2" value="Texto2"/> <br>
+	</form>
+
+	<form id="form2">
+		Texto3:<input type="text" id="texto3" value="Texto3"/><br>
+		Texto4:<input type="text" id="texto4" value="Texto4"/><br>
+	</form>
+
+	Texto5:<input type="text" id="texto5" valor5="HHH" value="Texto5"/><br><br>
+	<input type="button" id="boton1" value="Mostrar"/>
+</body>
+</html>

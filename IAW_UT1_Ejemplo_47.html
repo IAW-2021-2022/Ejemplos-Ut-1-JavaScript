@@ -1,0 +1,29 @@
+<html>	
+<head>	
+	<title> UT1 - JavaScript - Ejemplo 47 </title>
+	<script>
+	window.onload = function() 
+	{
+		var texto2 = document.getElementById("texto2");
+		texto2.onselect = function ()
+				{	
+					alert('Has seleccionado el texto');
+					alert('De dentro de la caja');
+				}
+		texto2.onclick = texto2_onClick;
+		texto2.onkeypress = function ()
+				{	
+					alert('Has pulsado una tecla dentro de la caja');					
+				};
+	}
+	function texto2_onClick()
+	{
+		alert ("Has hecho click con el ratón");
+	}
+	</script>
+</head>
+<body>
+	Nombre2: <input type="text" id="texto2" 
+				   value="Sin nombre"/>		
+</body>
+</html>

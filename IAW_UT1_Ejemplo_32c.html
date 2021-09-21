@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<title> UT1 - JavaScript - Actividad Resuelta 32b </title>
+</head>
+<body>
+<script>
+function giraCadena(cad) 
+{
+    // Paso 1. Creamos una cadena vacía para almacenar la cadena invertida
+    var nuevaCadena = "";
+ 
+    /* Paso 2. En el bucle for, empezamos por el último carácter, y lo vamos
+	añadiendo a la nueva cadena en orden inverso, desde el final hasta el principio */
+    for (var i = cad.length - 1; i >= 0; i--) 
+	{ 
+        nuevaCadena = nuevaCadena + cad[i]; 
+    }
+     
+    // Paso 3. Devolvemos la cadenainvertida
+    return nuevaCadena; 
+}
+ 
+var cadena = "Haga el favor de cerrar la puerta"
+document.write(cadena);
+document.write("<br/>");
+document.write(giraCadena(cadena));
+</script>
+</body>
+</html>

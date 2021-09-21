@@ -1,0 +1,16 @@
+<html>
+<head>	
+	<title> UT1 - JavaScript - Ejemplo 49 </title>
+	<script>
+	window.onload = function(){
+		document.getElementById("clave").onblur = saludo;
+	}
+	function saludo(){
+		alert("Gracias por introducir una contraseña");
+	}	
+	</script>
+</head>
+<body>
+PASSWORD: <input type="password" id="clave" value="" size="6" maxlength="6"/>
+</body>
+</html>

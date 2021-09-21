@@ -1,0 +1,30 @@
+<!DOCUMENT html>
+<html lang="es-ES">
+<head>	
+	<meta charset="UTF-8"/>
+	<title> UT1 - JavaScript - Ejemplo 54 </title>
+	<script>
+	window.onload = function(){
+		document.getElementById("fabricante").onclick = muestraSeleccion;		
+	}	
+	function muestraSeleccion(){
+		document.getElementById("seleccion").value = this.selectedIndex;
+		document.getElementById("seleccion").value += "-"+ this.value;
+	}
+	</script>
+</head>
+<body>
+<label for="fabricante">Elige a tu fabricante favorito de microprocesadores:</label>
+<br/>
+<select id="fabricante" size="5">
+	<option value="Intel">Intel Corporation</option>
+	<option value="AMD">AMD - Advanced Micro Devices</option>
+	<option selected value="Qualcomm">Qualcomm</option>
+	<option value="TSMC">Taiwan Semiconductor Manufacturing Company</option>
+	<option value="Spreadtrum">Spreadtrum Communications, Inc.</option>
+</select>
+<br/>
+<br/>
+<input type="text" id="seleccion"/>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title> UT1 - JavaScript - Ejemplo 21 </title>
+</head>
+<body>
+<script>
+	var max=5;
+
+	var Personas=new Array(); //Ni siquiera haría falta declarar el tamaño con Array(5)
+	for (i=0; i<max; i++) {
+		Personas[i]=new Array(); //Se podría poner =Array(2), pero así tb funciona.
+		}
+	Personas[0][0]="Juan Programmer";
+	Personas[0][1]=100;
+
+	Personas[1][0]="Peter Analyst";
+	Personas[1][1]=200;
+
+	Personas[2][0]="Andrés HardwareMan";
+	Personas[2][1]=300;
+
+	Personas[3][0]="Steve Jobs";
+	Personas[3][1]=100000;
+
+	Personas[4][0]="Bill Gates";
+	Personas[4][1]=1000000000;
+
+	for (i=0; i<max; i++)
+	     document.write(Personas[i][0] + " tiene " + Personas[i][1] + " Euros en su bolsillo" + "<br>");
+</script>
+</html>

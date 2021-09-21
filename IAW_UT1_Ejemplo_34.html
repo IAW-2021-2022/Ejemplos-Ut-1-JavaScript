@@ -1,0 +1,18 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title> UT1 - JavaScript - Ejemplo 34 </title>
+</head>
+<body>
+	<script>
+		function cargar1(){			
+			window.open(document.getElementById("nuevaVentana").value,"Nueva Ventana");	
+		}		
+	</script>
+	
+	<form id="MiForm">
+		<input id="nuevaVentana" type="text" value="IAW_UT1_Ejemplo_33.html">
+		<input type="submit" value="Abrir documento" onClick="cargar1()">
+	</form>
+</body>
+</html>

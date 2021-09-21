@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>	
+	<meta charset="UTF-8"/>
+	<title> UT1 - JavaScript - Ejemplo 55 </title>
+	<style>
+		#salida {
+			border: 1px black solid;
+			width: 300px;
+			height: 100px;
+		}
+		
+	</style>
+	<script>
+	window.onload = function(){
+		document.getElementById("fabricante").onchange = muestraSeleccion;		
+	}	
+	function muestraSeleccion(){
+		var opciones = "";		
+		for (var i=0; i<this.length; i++){
+			if (this.options[i].selected){
+				opciones=opciones+ "<br/>" + this.options[i].value;
+			}
+		}
+		document.getElementById("salida").innerHTML = opciones;
+	}
+	</script>
+</head>
+<body>
+	<select id="fabricante" size="5" multiple="multiple">
+		<option value="Intel">Intel Corporation</option>
+		<option value="AMD">AMD - Advanced Micro Devices</option>
+		<option value="Qualcomm">Qualcomm</option>
+		<option value="TSMC">Taiwan Semiconductor Manufacturing Company</option>
+		<option value="Spreadtrum">Spreadtrum Communications, Inc.</option>
+	</select>
+	<div id="salida"></div>
+</body>
+</html>

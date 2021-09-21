@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang='es'>
+    <head>
+        <meta charset="UTF-8"/>
+		<title> UT1 - JavaScript - Ejemplo 52 </title>
+	<script>			
+	window.onload = function(){
+		document.getElementById('bt1').onclick = muestra;
+	}
+	function muestra()
+		{
+			var elegido="";
+			var fin = 0;			
+			var rB = document.getElementsByName('estCivil');						
+			
+			for (var i=0; (i<rB.length) && (fin == 0); i++)
+			{
+				if (rB[i].checked) 
+				{
+					elegido=rB[i].value;
+					fin = 1;
+				}
+			}
+			alert("Está marcado:" + elegido);			
+		}
+	</script>
+</head>
+<body>
+	<br><br>
+	<u>Estado Civil</u><br>
+	<input type="radio" name="estCivil" value="soltero" checked/> soltero <br>
+	<input type="radio" name="estCivil" value="casado"/> casado <br>
+	<input type="radio" name="estCivil" value="separado"/> separado <br>
+	<input type="radio" name="estCivil" value="viudo"/> viudo <br>
+	<input type="button" id="bt1" value="Mostrar el elemento marcado"/>
+</body>
+</html>

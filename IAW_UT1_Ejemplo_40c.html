@@ -1,0 +1,24 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title> UT1 - JavaScript - Ejemplo 40b </title>
+</head>
+<body>
+<script>
+function cambio1(){
+	document.getElementById("text1").outerHTML="<p id='text1'>Es un párrafo</p>";
+}
+function cambio2(){
+	document.getElementById("text1").outerHTML="<h1 id='text1'>Es un encabezado de tipo h1</h1>";
+}
+function cambio3(){
+	var nuevotexto = prompt("Escribe el nuevo texto del elemento:");
+	document.getElementById("text1").innerHTML=nuevotexto;
+}
+</script>
+<h1 id="text1">Es un encabezado de tipo h1</h1>
+<input id="btn1" type="button" onClick="cambio1()" value="Párrafo"/>
+<input id="btn2" type="button" onClick="cambio2()" value="Encabezado"/>
+<input id="btn3" type="button" onClick="cambio3()" value="Cambia contenido"/>
+</body>
+</html>

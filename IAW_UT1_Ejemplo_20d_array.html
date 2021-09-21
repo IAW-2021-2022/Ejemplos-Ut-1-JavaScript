@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8"/>
+	<title> UT1 - JavaScript - Ejemplo 20 d</title>
+</head>
+<body>
+<script>
+	var miArray = new Array(15);
+	//var miArray = new Array(15,14);	
+	//var miArray = new Array();
+	//var miArray = Array();
+	//var miArray = [15];
+	document.write("El array tiene " + miArray.length + " elementos.<br/>");	
+	document.write("<br/><u>CONTENIDO DEL ARRAY:</u>");
+	
+	document.write("<ul>");
+	for (var i=0;i<miArray.length;i++)	
+	{
+		document.write("<li>");
+		document.write(miArray[i]);
+		document.write("</li>");		
+	}
+	document.write("</ul>");
+</script>
+</html>

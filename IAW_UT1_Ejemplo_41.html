@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title> UT1 - JavaScript - Ejemplo 41 </title>
+</head>
+<!-- Al cargar/descargar una página: -->
+<body onLoad="MiFuncion()" onUnload="alert('¡No te vayas, por favor!')">
+	<script>
+		function MiFuncion(){
+			alert("Mi función");
+		}
+
+		function MiFuncion2(){
+			javascript:document.bgColor='red';
+		}
+	</script>
+	<!-- Al pulsar sobre un botón ejecutamos una función  -->
+	<input type="button" value="Botón 1" onClick="MiFuncion()"><br>
+
+	<!-- Al pasar por encima de un texto en H1 llamo a la función. Al pasar por encima 
+		 del H2, cambiamos el color de fondo de la página, y al salirnos también: -->
+
+	<h1 onMouseOver="MiFuncion()">Texto en H1</h1>
+	<h2 onMouseOver="document.bgColor='silver'" onMouseOut="document.bgColor='white'">Te cambio el fondo</h2>
+	<h3 onMouseOver="MiFuncion2()" onMouseOut="document.bgColor='white'">Te vuelvo a cambiar el fondo</h3>
+
+	<!-- Llamada a una función (y a código escrito directamente) al pulsar sobre un enlace: -->
+	<a href="javascript:MiFuncion()">Enlace a una función</a>
+	<a href="javascript:alert('Código')">Enlace a código</a>
+
+	<!-- Llamada a un enlace: Al pulsar sobre un botón nos movemos a otra página: -->
+	<input type="button" value="Ejecutar2" onClick="javascript:location.href='IAW_UT1_Ejemplo_24.html'"><br>
+</script>
+</body>
+</html>

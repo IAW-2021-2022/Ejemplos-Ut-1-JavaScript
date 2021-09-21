@@ -1,0 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title> UT1 - JavaScript - Ejemplo 14 </title>
+</head>
+<body>
+<script>
+	function Persona(nombreP, edadP, nacionP){
+		this.nombre=nombreP;
+		this.edad=edadP;
+		this.nacion=nacionP;
+	}
+
+	var alguien= new Persona("Carlota",33,"Francia"); //es necesario usar new para crear un objeto
+
+	for (var i in alguien){
+		propiedad_actual='alguien.' + i + '=' + alguien[i] + '<br>';
+		document.write(propiedad_actual);
+	}
+
+</script>
+</html>

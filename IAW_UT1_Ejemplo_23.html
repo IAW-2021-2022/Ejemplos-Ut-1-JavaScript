@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8"/>
+	<title> UT1 - JavaScript - Ejemplo 23 </title>
+</head>
+<body>
+<script>
+	var elementos= new Array();
+	var entrada, numero, tam;
+	do
+	{		
+		if (entrada=prompt("Indica la operación:IP(insertar al pricipio),IF(insertar al final)\n,BP(borrar del principio),BF(Borrar del final),Cancelar(salir)"))
+		{
+			if ((entrada=="IP") || (entrada =="IF"))
+			{
+				do
+				{
+					numero=prompt("Introduce el número a insertar en el array:");
+				}				
+				while(!numero); // Si pulsa cancelar, volvemos a pedir el número
+			}
+			switch(entrada)
+			{
+				case "BP":
+						numero = elementos.shift();
+						alert("Se eliminó del principio del array el número "+numero);
+					break;
+				case "BF":
+						numero = elementos.pop();
+						alert("Se eliminó del final del array el número "+numero);
+					break;
+				case "IP":
+						tam = elementos.unshift(numero);
+						alert("Se insertó al principio del array el número "+numero+" y ahora tiene "+tam+" elementos");
+					break;
+				case "IF":
+						tam = elementos.push(numero);
+						alert("Se insertó al final del array el número "+numero+" y ahora tiene "+tam+" elementos");
+					break;
+			}			
+		}
+		//mostramos el array
+		document.write("<br/>elementos = [");
+		for (var i in elementos)
+		{
+			document.write(elementos[i]);
+			if (i < (elementos.length - 1))
+			{
+				document.write(",");
+			}			
+		}
+		document.write("]");
+	} while(entrada);
+	
+	
+</script>
+</html>

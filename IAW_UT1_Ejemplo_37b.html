@@ -1,0 +1,17 @@
+<html>
+<head>	
+	<title> UT1 - JavaScript - Ejemplo 37 </title>
+<script>
+	function mostrarAtributo(elemento,atributo){
+		var valorAtributo=document.getElementById(elemento).getAttribute(atributo);
+		alert("URL = " + valorAtributo);
+		valorAtributo=document.getElementById(elemento).href;
+		alert("URL = " + valorAtributo);
+	}
+</script>
+</head>
+<body>	
+	<a id="enlace" href="http://www.iesbeniajan.es">Web del Instituto</a>
+	<input type="button" onclick="mostrarAtributo('enlace','href')" value="Mostrar URL del enlace">	
+</body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+<head>	
+	<title> UT1 - JavaScript - Ejemplo 57 </title>
+	<script>
+	window.onload = function(){
+		document.getElementById("boton1").onclick = mostrarElementos;		
+	}	
+	function mostrarElementos(){
+		var i, s="";
+		var vForm = document.getElementById("formTextos");
+		for (i=0; i<vForm.length; i++) {
+			s= s + vForm[i].id + "=" + vForm[i].value + "\n";
+		}
+		alert(s);
+	}
+</script>
+</head>
+<body>	
+	<form id="formTextos">
+		Texto0:<input type="text" id="texto0" value="Texto0"/><br>
+		Texto1:<input type="text" id="texto1" value="Texto1"/><br>
+		Texto2:<input type="text" id="texto2" value="Texto2"/><br>
+		Texto3:<input type="text" id="texto3" value="Texto3"/><br>
+		Texto4:<input type="text" id="texto4" value="Texto4"/><br>
+	</form>
+	<input type="button" id="boton1" value="Mostrar"/>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+<head>	
+	<title> UT1 - JavaScript - Ejemplo 50 </title>
+	<script>
+	function efecto()
+	{
+		document.getElementById("Caja1").rows=document.getElementById("Caja1").rows+1;
+		document.getElementById("Caja1").cols=document.getElementById("Caja1").cols+1;		
+	
+		if (document.getElementById("Caja1").getAttribute("Mayus")== "1") 
+		{
+			document.getElementById("Caja1").value=document.getElementById("Caja1").value.toUpperCase();
+			document.getElementById("Caja1").setAttribute("Mayus","0");
+		}
+		else
+		{
+			document.getElementById("Caja1").value=document.getElementById("Caja1").value.toLowerCase();
+			document.getElementById("Caja1").setAttribute("Mayus","1");
+		}	
+	}	
+	</script>
+</head>
+<body>
+	<textarea id="Caja1" rows="3" cols="15" Mayus="1"
+		onChange="alert(document.getElementById('Caja1').value)">	
+		Este es el texto que contiene el textarea </textarea>
+	
+	<input type="button" value="OK" onClick="efecto()">
+</body>
+</html>

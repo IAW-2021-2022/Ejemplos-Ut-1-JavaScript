@@ -1,0 +1,23 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title> UT1 - JavaScript - Ejemplo 31 </title>
+	<script>
+		function calculaPrecioTotal(precio, porcentajeImpuestos) 
+		{
+			var gastosEnvio = 10;
+			var precioConImpuestos = (1 + porcentajeImpuestos/100) * precio;
+			var precioTotal = precioConImpuestos + gastosEnvio;
+			return precioTotal.toFixed(2);
+		}
+		
+	</script>
+
+</head>
+<body>
+	<script>
+		var precioTotal = calculaPrecioTotal(23.34, 16);
+		alert("El precio total es:" + precioTotal);
+	</script>
+</body>
+</html>

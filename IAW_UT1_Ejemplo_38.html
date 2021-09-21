@@ -1,0 +1,14 @@
+<html>
+<head>	
+	<title> UT1 - JavaScript - Ejemplo 38 </title>
+<script>
+	function cambiarAtributo(elemento,atributo,valor){
+		document.getElementById(elemento).setAttribute(atributo,valor);				
+	}
+</script>
+</head>
+<body>	
+	<font id="texto" color="red">Texto de ejemplo</font>
+	<input type="button" onclick="cambiarAtributo('texto','color','blue')" value="Cambiar el color del texto">	
+</body>
+</html>

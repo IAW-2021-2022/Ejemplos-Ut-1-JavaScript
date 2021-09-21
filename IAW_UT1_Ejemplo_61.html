@@ -1,0 +1,17 @@
+<html>
+<head>	
+	<title> UT1 - JavaScript - Ejemplo 61 </title>
+</head>
+<body>
+<script>
+	var fecha1=new Date(2020,11,31,0) ;
+	var fecha2=new Date(2021,0,1,1);
+	document.write("<br>fecha1.getTime()=" + fecha1.getTime() + "<br>");
+	document.write("<br>fecha2.getTime()=" + fecha2.getTime() + "<br>");
+	var milis=fecha2.getTime()-fecha1.getTime();
+	document.write("<br>Milisegundos: fecha2.getTime()-fecha1.getTime()=" + milis  + "<br>");
+	document.write("<br>Segundos: fecha2.getTime()-fecha1.getTime()=" + milis/1000  + "<br>");
+	document.write("<br>Horas: fecha2.getTime()-fecha1.getTime()=" + milis/1000/3600  + "<br>");
+</script>
+</body>
+</html>

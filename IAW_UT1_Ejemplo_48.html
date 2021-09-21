@@ -1,0 +1,17 @@
+<html>
+<head>	
+	<title> UT1 - JavaScript - Ejemplo 48 </title>
+</head>
+<body>
+<script>
+	window.onload = function(){
+		document.getElementById("campoEdad").onblur = atrapado;
+	}
+	function atrapado(){
+		document.getElementById("campoEdad").focus();
+	}	
+</script>
+	Edad: <input type="text" id="campoEdad" value="99" size="3" maxlength="3"/>	
+	Nombre: <input type="text" id="campoNombre"/>	
+</body>
+</html>
